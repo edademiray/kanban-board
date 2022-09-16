@@ -1,6 +1,6 @@
 # Kanban table
 
-- [ ] oluşturulan card parent elemente eklenicek.
+- [x] oluşturulan card parent elemente eklenicek.
 - [ ] cardlara buton eklenip sağ sola yönlendirilicek
 
 
