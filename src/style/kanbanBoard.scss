@@ -54,12 +54,18 @@
     border: none;
     background-color: rgba(255, 0, 0, 0.586);
 }
-.move-btn{
+.move-r{
     margin-left: 1px;
 
     border:none;
     border-radius:8px ;
     float: right;
+}
+.move-l{
+    margin-left: 1px;
+
+    border:none;
+    border-radius:8px ;
 }
 .item-card{
     width: 95%;
@@ -71,3 +77,6 @@
 .item-val{
     border: none;
     width:80%; }
+.hide{
+    display: none;
+}
