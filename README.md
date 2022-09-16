@@ -1,7 +1,8 @@
 # Kanban table
 
 - [x] oluşturulan card parent elemente eklenicek.
-- [ ] cardlara buton eklenip sağ sola yönlendirilicek
+- [x] cardlara buton eklenicek
+- [ ] Divler arası geçiş yapılacak
 
 
 
