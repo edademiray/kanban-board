@@ -2,7 +2,8 @@
 
 - [x] oluşturulan card parent elemente eklenicek.
 - [x] cardlara buton eklenicek
-- [ ] Divler arası geçiş yapılacak
+- [ ] cardlar butonla gönderildiğinde nasıl sadece ilgili ileri geri butonları kalıcak ?
+- [ ] cardlar nasıl sağa sola gidecek ?
 
 
 
