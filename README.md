@@ -2,8 +2,8 @@
 
 - [x] oluşturulan card parent elemente eklenicek.
 - [x] cardlara buton eklenicek
-- [ ] cardlar butonla gönderildiğinde nasıl sadece ilgili ileri geri butonları kalıcak ?
-- [ ] cardlar nasıl sağa sola gidecek ?
+- [x] cardlar butonla gönderildiğinde nasıl sadece ilgili ileri geri butonları kalıcak ?
+- [x] cardlar nasıl sağa sola gidecek ?
 
 
 
