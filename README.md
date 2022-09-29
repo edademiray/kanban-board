@@ -11,5 +11,7 @@
 - [ ] Tasarım mobil ile uyumlu hale getirilmeli
 - [ ] Tasarım düzenlenmeli
 
-- for development use npm run-script develop
-- for publishing use npm run-script publish
+
+
+* for development use npm run-script develop
+* for publishing use npm run-script publish
