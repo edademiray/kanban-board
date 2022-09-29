@@ -80,3 +80,34 @@
 .hide{
     display: none;
 }
+
+@media only screen and (max-width: 600px) {
+    .kanban-container{
+        color: white;
+        width: 100%;
+        display:grid;
+        padding: 5px;
+    }
+    .item-card{
+        width: 100%;
+        height: auto;
+        padding: 6px;
+        margin-top: 8px;
+    }
+    .todo-div{
+       width: 90%;
+        margin-left: 0;
+    }
+    .ip-div{
+        width: 90%;
+        margin-left: 0;
+
+    }
+    .complate-div{
+        width: 90%;
+        margin-left: 0;
+
+
+    
+    }
+  }
