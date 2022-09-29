@@ -3,9 +3,9 @@ import createElement from '../utilities/createElement'
 
 const loadKanban = () => {
 
-    const todoArray = [ ]
-    const ipArray = [ ]
-    const compArray = [ ]
+    const todoArray = []
+    const ipArray = []
+    const compArray = []
 
     const kbContainer = createElement({ classList: ['kanban-container'] })
     const todoDiv = createElement({ classList: ['todo-div'], innerText: 'TODO' })
@@ -17,7 +17,9 @@ const loadKanban = () => {
     const complateaddBtn = createElement({ type: 'button', innerText: '+', classList: ['complate-btn'] })
 
     const itemCard = createElement({ classList: ['item-card'], innerText: 'Denemecardı' })
-
+    const mousemove = (e) =>{
+        console.log('tasınıuo')
+    }
 
     const createItem = (e) => {
         const itemCard = createElement({ classList: ['item-card'] })
@@ -47,32 +49,64 @@ const loadKanban = () => {
         }
 
 
-
+        // Sağ - Sol
         moveRight.addEventListener('click', (e) => {
-          inprogDiv.appendChild(itemCard)
+            const parent = e.target.parentElement;
+            const nextParent = parent.parentElement;
+            const nextDiv = nextParent.nextSibling
+            if (kbContainer.childNodes[2] == nextDiv) {
+                moveRight.classList.add('hide')
+                nextDiv.appendChild(itemCard)
+                moveLeft.classList.remove('hide')
+            }
+            if (kbContainer.childNodes[1] == nextDiv) {
+                moveRight.classList.remove('hide')
+                moveLeft.classList.remove('hide')
+                nextDiv.appendChild(itemCard)
+            }
+            else {
+                nextDiv.appendChild(itemCard)
+
+            }
+
         })
-        moveLeft.addEventListener('click', () => {
-            todoDiv.appendChild(itemCard)
+        moveLeft.addEventListener('click', (e) => {
+            const parentPrv = e.target.parentElement;
+            const nextParentPrv = parentPrv.parentElement;
+            const prvDiv = nextParentPrv.previousSibling
+            if (kbContainer.childNodes[0] == prvDiv) {
+                moveLeft.classList.add('hide')
+                prvDiv.appendChild(itemCard)
+                moveRight.classList.remove('hide')
+            }
+
+            if (kbContainer.childNodes[1] == prvDiv) {
+                moveLeft.classList.remove('hide')
+                moveRight.classList.remove('hide')
+                prvDiv.appendChild(itemCard)
+
+            }
+            else {
+                prvDiv.appendChild(itemCard)
+
+            }
         })
 
-
-        console.log(selectedDiv)
         selectedDiv.append(itemCard)
-
-      
-
-        console.log(todoArray)
+        itemCard.addEventListener('mousemove', mousemove)
     }
 
     const cardMove = () => {
-        console.log('tasınıyor')
+        //  console.log('tasınıyor')
     }
 
+  
 
+
+    
     todoaddBtn.addEventListener('click', createItem)
     ipaddBtn.addEventListener('click', createItem)
     complateaddBtn.addEventListener('click', createItem)
-
 
 
 
@@ -80,6 +114,9 @@ const loadKanban = () => {
     inprogDiv.append(ipaddBtn)
     complateDiv.append(complateaddBtn)
     kbContainer.append(todoDiv, inprogDiv, complateDiv)
+
+    const len = kbContainer.length
+    console.log(kbContainer.childNodes[0])
     return kbContainer;
 
 }
